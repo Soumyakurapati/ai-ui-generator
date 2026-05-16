@@ -134,14 +134,3 @@ https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800">
 
 
 
-git init
-
-git add .
-
-git commit -m "AI UI Generator"
-
-git branch -M main
-
-git remote add origin https://github.com/Soumyakurapati/ai-ui-generator.git
-
-git push -u origin main
