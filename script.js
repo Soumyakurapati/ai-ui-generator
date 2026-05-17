@@ -40,22 +40,24 @@ async function generateUI() {
 
         </nav>
 
-        <section class="hero">
+        <<section class="hero">
 
-          <div class="hero-text">
+  <div class="hero-text">
 
-            <h2>${prompt}</h2>
+    <h2>${prompt}</h2>
 
-            <p>${aiText}</p>
+    <p>
+      Discover premium black & gold fashion styles with elegant modern aesthetics.
+    </p>
 
-            <button>Explore Collection</button>
+    <button>Explore Collection</button>
 
-          </div>
+  </div>
 
-          <img
-          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200">
+  <img
+  src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200">
 
-        </section>
+</section>
 
         <h2 class="section-title">
           Featured Fashion
