@@ -16,23 +16,29 @@ async function generateUI() {
     });
 
     const data = await response.json();
+
     console.log(data);
 
-    const aiText = data.choices?.[0]?.message?.content;
+    const aiText =
+      data.choices?.[0]?.message?.content || "";
 
-    output.innerHTML = `
-      <div class="dashboard">
-        <h2>Luxury Fashion AI Design</h2>
-        <pre>${aiText}</pre>
-      </div>
-    `;
+    output.innerHTML = aiText;
 
   } catch (error) {
+
     console.log(error);
 
     output.innerHTML = `
-      <h2>Luxury Fashion Dashboard</h2>
-      <p>Generated fallback design ✨</p>
+      <div class="dashboard">
+
+        <h1>Luxury Fashion Dashboard</h1>
+
+        <div class="card">
+          <h2>Premium Collection</h2>
+          <p>Modern luxury fashion styles ✨</p>
+        </div>
+
+      </div>
     `;
   }
 }

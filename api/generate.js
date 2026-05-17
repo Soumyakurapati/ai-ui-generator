@@ -19,7 +19,20 @@ export default async function handler(req, res) {
         messages: [
           {
             role: "user",
-            content: prompt || "Generate a luxury fashion UI dashboard design"
+            content: `
+Generate ONLY clean HTML for a luxury fashion dashboard UI.
+
+Requirements:
+- black luxury theme
+- gold accents
+- modern navbar
+- hero section
+- fashion product cards
+- stylish premium UI
+- responsive design
+- NO explanations
+- ONLY HTML
+`
           }
         ]
       })
