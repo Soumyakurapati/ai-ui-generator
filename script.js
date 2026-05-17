@@ -28,6 +28,7 @@ async function generateUI() {
       <div class="dashboard">
 
         <nav class="navbar">
+
           <h1>LUXURY FASHION</h1>
 
           <div class="nav-links">
@@ -36,20 +37,24 @@ async function generateUI() {
             <a href="#">Shop</a>
             <a href="#">Contact</a>
           </div>
+
         </nav>
 
         <section class="hero">
 
           <div class="hero-text">
+
             <h2>${prompt}</h2>
 
             <p>${aiText}</p>
 
             <button>Explore Collection</button>
+
           </div>
 
           <img
           src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200">
+
         </section>
 
         <h2 class="section-title">
