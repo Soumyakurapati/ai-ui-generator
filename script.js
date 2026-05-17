@@ -20,25 +20,74 @@ async function generateUI() {
     console.log(data);
 
     const aiText =
-      data.choices?.[0]?.message?.content || "";
+      data.choices?.[0]?.message?.content ||
+      "Luxury Fashion Collection";
 
-    output.innerHTML = aiText;
+    output.innerHTML = `
+
+      <div class="dashboard">
+
+        <nav class="navbar">
+          <h1>LUXURY FASHION</h1>
+
+          <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Collections</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+
+        <section class="hero">
+
+          <div class="hero-text">
+            <h2>${prompt}</h2>
+
+            <p>${aiText}</p>
+
+            <button>Explore Collection</button>
+          </div>
+
+          <img
+          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200">
+        </section>
+
+        <h2 class="section-title">
+          Featured Fashion
+        </h2>
+
+        <div class="products">
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800">
+            <h3>Luxury Black Outfit</h3>
+            <p>$199</p>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800">
+            <h3>Premium Streetwear</h3>
+            <p>$249</p>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800">
+            <h3>Elegant Fashion Dress</h3>
+            <p>$299</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    `;
 
   } catch (error) {
 
     console.log(error);
 
     output.innerHTML = `
-      <div class="dashboard">
-
-        <h1>Luxury Fashion Dashboard</h1>
-
-        <div class="card">
-          <h2>Premium Collection</h2>
-          <p>Modern luxury fashion styles ✨</p>
-        </div>
-
-      </div>
+      <h2>Something went wrong.</h2>
     `;
   }
 }
